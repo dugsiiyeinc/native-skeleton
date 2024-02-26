@@ -1,1 +1,1 @@
-# react hot skeleton
+# netive skeleton
