@@ -1,19 +1,38 @@
 {
   "name": "native-skeleton",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "The Node.js Toolkit for Rapid Development.",
+  "version": "0.0.0",
+  "author": "Mr Sharafdin",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "type": "module",
+  "bin": "./src/index.js",
+  "engines": {
+    "node": ">=0.10.0"
   },
+  "homepage": "https://www.sharafdin.com/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sharafdin/native-skeleton.git"
+    "url": "https://github.com/sharafdin/native-skeleton.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "native-skeleton",
+    "react",
+    "frontend"
+  ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src/"
+  ],
   "bugs": {
     "url": "https://github.com/sharafdin/native-skeleton/issues"
   },
-  "homepage": "https://github.com/sharafdin/native-skeleton#readme"
+  "dependencies": {
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9"
+  }
 }
