@@ -1,1 +1,1 @@
-# netive skeleton
+# native skeleton
