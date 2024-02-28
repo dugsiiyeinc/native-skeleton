@@ -1,5 +1,5 @@
 {
-  "name": "react-hot-skeleton",
+  "name": "native-skeleton",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sharafdin/react-hot-skeleton.git"
+    "url": "git+https://github.com/sharafdin/native-skeleton.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sharafdin/react-hot-skeleton/issues"
+    "url": "https://github.com/sharafdin/native-skeleton/issues"
   },
-  "homepage": "https://github.com/sharafdin/react-hot-skeleton#readme"
+  "homepage": "https://github.com/sharafdin/native-skeleton#readme"
 }
