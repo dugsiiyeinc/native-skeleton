@@ -1,0 +1,9 @@
+*.log
+.DS_Store
+node_modules
+.cache
+coverage
+dist
+/headless
+.vscode
+.vercel
