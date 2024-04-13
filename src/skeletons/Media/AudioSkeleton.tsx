@@ -1,7 +1,5 @@
-const AudioSkeleton = () => {
+export const AudioSkeleton = () => {
   return (
     <div>AudioSkeleton</div>
   )
 }
-
-export default AudioSkeleton
