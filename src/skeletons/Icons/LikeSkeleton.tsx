@@ -1,7 +1,5 @@
-const LikeSkeleton = () => {
+export const LikeSkeleton = () => {
   return (
     <div>LikeSkeleton</div>
   )
 }
-
-export default LikeSkeleton
