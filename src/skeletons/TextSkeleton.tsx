@@ -11,5 +11,7 @@ export const TextSkeleton: React.FC<TextSkeletonProps> = ({
   height,
   animatePulse,
 }) => {
-  return <></>;
+  return <>
+  {[width, height, animatePulse]}
+  </>;
 };

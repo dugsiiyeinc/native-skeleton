@@ -20,5 +20,18 @@ export const ShapeSkeleton: React.FC<ShapeSkeletonProps> = ({
   borderBottomLeftRadius,
   borderBottomRightRadius,
 }) => {
-  return <></>;
+  return (
+    <>
+      {[
+        width,
+        height,
+        animatePulse,
+        borderRadius,
+        borderTopLeftRadius,
+        borderTopRightRadius,
+        borderBottomLeftRadius,
+        borderBottomRightRadius,
+      ]}
+    </>
+  );
 };

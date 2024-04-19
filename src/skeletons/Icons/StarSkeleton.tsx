@@ -13,5 +13,5 @@ export const StarSkeleton: React.FC<StarSkeletonProps> = ({
   flexDirection,
   animatePulse,
 }) => {
-  return <></>
+  return <>{[size, count, flexDirection, animatePulse]}</>;
 };

@@ -11,5 +11,5 @@ export const ImageSkeleton: React.FC<ImageSkeletonProps> = ({
   height,
   animatePulse,
 }) => {
-  return <></>;
+  return <>{[width, height, animatePulse]}</>;
 };

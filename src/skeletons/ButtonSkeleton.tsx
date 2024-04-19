@@ -20,5 +20,18 @@ export const ButtonSkeleton: React.FC<ButtonSkeletonProps> = ({
   borderBottomLeftRadius,
   borderBottomRightRadius,
 }) => {
-  return <></>;
+  return (
+    <>
+      {[
+        width,
+        height,
+        animatePulse,
+        borderRadius,
+        borderTopLeftRadius,
+        borderTopRightRadius,
+        borderBottomLeftRadius,
+        borderBottomRightRadius,
+      ]}
+    </>
+  );
 };
