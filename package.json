@@ -29,6 +29,7 @@
     "url": "https://github.com/sharafdin/native-skeleton/issues"
   },
   "dependencies": {
+    "@types/react": "^18.2.79",
     "yonode": "^1.0.0"
   },
   "devDependencies": {
