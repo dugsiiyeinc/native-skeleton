@@ -1,12 +1,11 @@
 {
   "name": "native-skeleton",
   "description": "ReactJS package for implementing skeleton components.",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": "Mr Sharafdin",
   "license": "MIT",
-  "main": "./src/index.js",
-  "type": "module",
-  "bin": "./src/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -23,12 +22,16 @@
   "files": [
     "LICENSE",
     "README.md",
-    "src/"
+    "dist/"
   ],
+  "scripts": {
+    "build": "tsup"
+  },
   "bugs": {
     "url": "https://github.com/sharafdin/native-skeleton/issues"
   },
   "dependencies": {
+    "@types/react": "^18.2.79",
     "yonode": "^1.0.0"
   },
   "devDependencies": {

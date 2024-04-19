@@ -1,5 +1,5 @@
 import React from "react";
-interface ButtonSkeletonProps {
+interface ShapeSkeletonProps {
   width: number;
   height: number;
   animatePulse: boolean;
@@ -10,7 +10,7 @@ interface ButtonSkeletonProps {
   borderBottomRightRadius: number;
 }
 
-export const ButtonSkeleton: React.FC<ButtonSkeletonProps> = ({
+export const ShapeSkeleton: React.FC<ShapeSkeletonProps> = ({
   width,
   height,
   animatePulse,
