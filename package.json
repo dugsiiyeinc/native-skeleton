@@ -25,6 +25,9 @@
     "README.md",
     "src/"
   ],
+  "scripts": {
+    "build": "tsup"
+  },
   "bugs": {
     "url": "https://github.com/sharafdin/native-skeleton/issues"
   },
