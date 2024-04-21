@@ -3,7 +3,6 @@ import { defineConfig, Options } from 'tsup';
 const commonConfig: Options = {
   minify: true,
   dts: true,
-  sourcemap: true,
   clean: true,
 };
 export default defineConfig([
