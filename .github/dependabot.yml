@@ -1,0 +1,8 @@
+# Dependabot config: Automatically updates npm packages weekly to maintain and secure project dependencies.
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
