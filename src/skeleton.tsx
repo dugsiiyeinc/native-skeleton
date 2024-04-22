@@ -41,7 +41,7 @@ interface NativeSkeletonProps {
 export const NativeSkeleton = ({
   width,
   height,
-  animatePulse,
+  animatePulse = true,
   borderRadius,
   borderTopLeftRadius,
   borderTopRightRadius,
@@ -62,7 +62,35 @@ export const NativeSkeleton = ({
     background: `linear-gradient(to right, #e7e7e8, #f0f0f1)`,
   };
 
-  return <div style={styleSekeleton}>Native skeleton</div>;
+  return (
+    <>
+      <style>
+        {`
+          @keyframes pulse {
+            0%, 100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+            50% {
+              opacity: 0.5;
+              transform: scale(1.1);
+            }
+          }
+        `}
+      </style>
+      <div
+        style={{
+          ...style,
+          ...styleSekeleton,
+          animation: animatePulse ? "pulse 2s infinite" : "none",
+        }}
+        className={className}
+      >
+        Native skeleton
+      </div>
+      ;
+    </>
+  );
 };
 
 export default NativeSkeleton;
