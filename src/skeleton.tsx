@@ -51,7 +51,7 @@ export const NativeSkeleton = ({
   style,
   className,
 }: NativeSkeletonProps): JSX.Element => {
-  const styleSekeleton: React.CSSProperties = {
+  const styleSkeleton: React.CSSProperties = {
     width,
     height,
     borderTopLeftRadius: circle ? "0" : borderTopLeftRadius || "",
@@ -81,7 +81,7 @@ export const NativeSkeleton = ({
       <div
         style={{
           ...style,
-          ...styleSekeleton,
+          ...styleSkeleton,
           animation: animatePulse ? "pulse 2s infinite" : "none",
         }}
         className={className}
