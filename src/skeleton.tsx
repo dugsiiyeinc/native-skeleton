@@ -52,8 +52,8 @@ export const NativeSkeleton = ({
   className,
 }: NativeSkeletonProps): JSX.Element => {
   const styleSkeleton: React.CSSProperties = {
-    width,
-    height,
+    width: `${width}px`,
+    height: `${height}px`,
     borderTopLeftRadius: circle ? "0" : borderTopLeftRadius || "",
     borderTopRightRadius: circle ? "0" : borderTopRightRadius || "",
     borderBottomLeftRadius: circle ? "0" : borderBottomLeftRadius || "",
