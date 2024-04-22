@@ -2,7 +2,7 @@ import React from "react";
 
 /**
  * Interface for properties of the NativeSkeleton component.
- * 
+ *
  * @interface NativeSkeletonProps
  * @param {number} width - The width of the skeleton loader.
  * @param {number} height - The height of the skeleton loader.
@@ -19,7 +19,7 @@ import React from "react";
 interface NativeSkeletonProps {
   width: number;
   height: number;
-  animatePulse: boolean;
+  animatePulse?: boolean;
   borderRadius?: string;
   borderTopLeftRadius?: string;
   borderTopRightRadius?: string;
@@ -41,7 +41,7 @@ interface NativeSkeletonProps {
 export const NativeSkeleton = ({
   width,
   height,
-  animatePulse,
+  animatePulse = true,
   borderRadius,
   borderTopLeftRadius,
   borderTopRightRadius,
@@ -49,21 +49,47 @@ export const NativeSkeleton = ({
   borderBottomRightRadius,
   circle,
   style,
-  className
+  className,
 }: NativeSkeletonProps): JSX.Element => {
+  const styleSekeleton: React.CSSProperties = {
+    width,
+    height,
+    borderTopLeftRadius: circle ? "0" : borderTopLeftRadius || "",
+    borderTopRightRadius: circle ? "0" : borderTopRightRadius || "",
+    borderBottomLeftRadius: circle ? "0" : borderBottomLeftRadius || "",
+    borderBottomRightRadius: circle ? "0" : borderBottomRightRadius || "",
+    borderRadius: circle ? "50%" : borderRadius || "",
+    background: `linear-gradient(to right, #e7e7e8, #f0f0f1)`,
+  };
 
   return (
-    <div>{[ width,
-      height,
-      animatePulse,
-      borderRadius,
-      borderTopLeftRadius,
-      borderTopRightRadius,
-      borderBottomLeftRadius,
-      borderBottomRightRadius,
-      circle,
-      style,
-      className].toString()}</div>
+    <>
+      <style>
+        {`
+          @keyframes pulse {
+            0%, 100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+            50% {
+              opacity: 0.5;
+              transform: scale(1.1);
+            }
+          }
+        `}
+      </style>
+      <div
+        style={{
+          ...style,
+          ...styleSekeleton,
+          animation: animatePulse ? "pulse 2s infinite" : "none",
+        }}
+        className={className}
+      >
+        Native skeleton
+      </div>
+      ;
+    </>
   );
 };
 
