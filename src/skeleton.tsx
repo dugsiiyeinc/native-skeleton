@@ -38,7 +38,7 @@ interface NativeSkeletonProps {
  * @param {NativeSkeletonProps} props The properties for configuring the NativeSkeleton.
  * @returns {JSX.Element} The React component displaying the skeleton.
  */
-export const NativeSkeleton: React.FC<NativeSkeletonProps> = ({
+export const NativeSkeleton = ({
   width,
   height,
   animatePulse,
@@ -50,25 +50,20 @@ export const NativeSkeleton: React.FC<NativeSkeletonProps> = ({
   circle,
   style,
   className
-}) => {
-  // Build the style object dynamically based on props
-  const skeletonStyle: React.CSSProperties = {
-    width,
-    height,
-    animation: animatePulse ? "pulseAnimation 2s infinite" : undefined,
-    borderRadius,
-    borderTopLeftRadius,
-    borderTopRightRadius,
-    borderBottomLeftRadius,
-    borderBottomRightRadius,
-    ...(circle ? { borderRadius: '50%' } : {}),
-    ...style
-  };
+}: NativeSkeletonProps): JSX.Element => {
 
   return (
-    <div style={skeletonStyle} className={className}>
-      {/* Placeholder element */}
-    </div>
+    <div>{[ width,
+      height,
+      animatePulse,
+      borderRadius,
+      borderTopLeftRadius,
+      borderTopRightRadius,
+      borderBottomLeftRadius,
+      borderBottomRightRadius,
+      circle,
+      style,
+      className].toString()}</div>
   );
 };
 
