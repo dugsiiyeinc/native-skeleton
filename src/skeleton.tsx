@@ -2,7 +2,7 @@ import React from "react";
 
 /**
  * Interface for properties of the NativeSkeleton component.
- * 
+ *
  * @interface NativeSkeletonProps
  * @param {number} width - The width of the skeleton loader.
  * @param {number} height - The height of the skeleton loader.
@@ -19,7 +19,7 @@ import React from "react";
 interface NativeSkeletonProps {
   width: number;
   height: number;
-  animatePulse: boolean;
+  animatePulse?: boolean;
   borderRadius?: string;
   borderTopLeftRadius?: string;
   borderTopRightRadius?: string;
@@ -49,22 +49,9 @@ export const NativeSkeleton = ({
   borderBottomRightRadius,
   circle,
   style,
-  className
+  className,
 }: NativeSkeletonProps): JSX.Element => {
-
-  return (
-    <div>{[ width,
-      height,
-      animatePulse,
-      borderRadius,
-      borderTopLeftRadius,
-      borderTopRightRadius,
-      borderBottomLeftRadius,
-      borderBottomRightRadius,
-      circle,
-      style,
-      className].toString()}</div>
-  );
+  return <div>Native skeleton</div>;
 };
 
 export default NativeSkeleton;
