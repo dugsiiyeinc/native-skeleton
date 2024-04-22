@@ -66,23 +66,23 @@ export const NativeSkeleton = ({
     <>
       <style>
         {`
-          @keyframes pulse {
-            0%, 100% {
-              opacity: 1;
-              transform: scale(1);
-            }
-            50% {
-              opacity: 0.5;
-              transform: scale(1.1);
-            }
-          }
+         @keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
         `}
       </style>
       <div
         style={{
           ...style,
           ...styleSkeleton,
-          animation: animatePulse ? "pulse 2s infinite" : "none",
+          animation: animatePulse
+            ? "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+            : "none",
         }}
         className={className}
       >
