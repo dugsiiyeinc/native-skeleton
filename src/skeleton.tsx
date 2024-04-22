@@ -51,7 +51,13 @@ export const NativeSkeleton = ({
   style,
   className,
 }: NativeSkeletonProps): JSX.Element => {
-  return <div>Native skeleton</div>;
+  const styleSekeleton: React.CSSProperties = {
+    width,
+    height,
+    background: `linear-gradient(to right, #e7e7e8, #f0f0f1)`,
+  };
+
+  return <div style={styleSekeleton}>Native skeleton</div>;
 };
 
 export default NativeSkeleton;
