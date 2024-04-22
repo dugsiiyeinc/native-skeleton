@@ -54,11 +54,11 @@ export const NativeSkeleton = ({
   const styleSekeleton: React.CSSProperties = {
     width,
     height,
-    borderRadius: borderRadius || "",
-    borderTopLeftRadius: borderTopLeftRadius || "",
-    borderTopRightRadius: borderTopRightRadius || "",
-    borderBottomLeftRadius: borderBottomLeftRadius || "",
-    borderBottomRightRadius: borderBottomRightRadius || "",
+    borderTopLeftRadius: circle ? "0" : borderTopLeftRadius || "",
+    borderTopRightRadius: circle ? "0" : borderTopRightRadius || "",
+    borderBottomLeftRadius: circle ? "0" : borderBottomLeftRadius || "",
+    borderBottomRightRadius: circle ? "0" : borderBottomRightRadius || "",
+    borderRadius: circle ? "50%" : borderRadius || "",
     background: `linear-gradient(to right, #e7e7e8, #f0f0f1)`,
   };
 
