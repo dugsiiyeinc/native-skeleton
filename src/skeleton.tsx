@@ -54,6 +54,11 @@ export const NativeSkeleton = ({
   const styleSekeleton: React.CSSProperties = {
     width,
     height,
+    borderRadius: borderRadius || "",
+    borderTopLeftRadius: borderTopLeftRadius || "",
+    borderTopRightRadius: borderTopRightRadius || "",
+    borderBottomLeftRadius: borderBottomLeftRadius || "",
+    borderBottomRightRadius: borderBottomRightRadius || "",
     background: `linear-gradient(to right, #e7e7e8, #f0f0f1)`,
   };
 
