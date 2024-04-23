@@ -62,7 +62,7 @@ export const NativeSkeleton = ({
       ? "0"
       : `${borderBottomRightRadius}px` || "",
 
-    background: `linear-gradient(to right, #e7e7e8, #f0f0f1)`,
+    background: `linear-gradient(to right, #b3b3b3, #808080)`,
   };
 
   return (
@@ -84,7 +84,7 @@ export const NativeSkeleton = ({
           ...styleSkeleton,
           ...style,
           animation: animatePulse
-            ? "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+            ? "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite"
             : "none",
         }}
         className={className}
