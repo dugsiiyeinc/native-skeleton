@@ -1,8 +1,10 @@
 import { defineConfig, Options } from 'tsup';
 
 const commonConfig: Options = {
+  format: ['esm'],
   minify: true,
   dts: true,
+  sourcemap: true,
   clean: true,
 };
 export default defineConfig([

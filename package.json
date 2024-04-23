@@ -1,7 +1,7 @@
 {
   "name": "native-skeleton",
   "description": "ReactJS package for implementing skeleton components.",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "author": "Mr Sharafdin",
   "license": "MIT",
   "type": "module",
@@ -32,6 +32,7 @@
     "url": "https://github.com/sharafdin/native-skeleton/issues"
   },
   "dependencies": {
+    "react": "^18.2.0",
     "yonode": "^1.0.0"
   },
   "devDependencies": {
