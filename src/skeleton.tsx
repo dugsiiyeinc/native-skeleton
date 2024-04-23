@@ -88,9 +88,7 @@ export const NativeSkeleton = ({
             : "none",
         }}
         className={className}
-      >
-        Native skeleton
-      </div>
+      ></div>
       ;
     </>
   );
