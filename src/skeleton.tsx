@@ -20,11 +20,11 @@ interface NativeSkeletonProps {
   width: number;
   height: number;
   animatePulse?: boolean;
-  borderRadius?: string;
-  borderTopLeftRadius?: string;
-  borderTopRightRadius?: string;
-  borderBottomLeftRadius?: string;
-  borderBottomRightRadius?: string;
+  borderRadius?: number;
+  borderTopLeftRadius?: number;
+  borderTopRightRadius?: number;
+  borderBottomLeftRadius?: number;
+  borderBottomRightRadius?: number;
   circle?: boolean;
   style?: React.CSSProperties;
   className?: string;
@@ -54,11 +54,14 @@ export const NativeSkeleton = ({
   const styleSkeleton: React.CSSProperties = {
     width: `${width}px`,
     height: `${height}px`,
-    borderTopLeftRadius: circle ? "0" : borderTopLeftRadius || "",
-    borderTopRightRadius: circle ? "0" : borderTopRightRadius || "",
-    borderBottomLeftRadius: circle ? "0" : borderBottomLeftRadius || "",
-    borderBottomRightRadius: circle ? "0" : borderBottomRightRadius || "",
-    borderRadius: circle ? "50%" : borderRadius || "",
+    borderRadius: circle ? "50%" : `${borderRadius}px` || "",
+    borderTopLeftRadius: circle ? "0" : `${borderTopLeftRadius}px` || "",
+    borderTopRightRadius: circle ? "0" : `${borderTopRightRadius}px` || "",
+    borderBottomLeftRadius: circle ? "0" : `${borderBottomLeftRadius}px` || "",
+    borderBottomRightRadius: circle
+      ? "0"
+      : `${borderBottomRightRadius}px` || "",
+
     background: `linear-gradient(to right, #e7e7e8, #f0f0f1)`,
   };
 
@@ -66,23 +69,23 @@ export const NativeSkeleton = ({
     <>
       <style>
         {`
-          @keyframes pulse {
-            0%, 100% {
-              opacity: 1;
-              transform: scale(1);
-            }
-            50% {
-              opacity: 0.5;
-              transform: scale(1.1);
-            }
-          }
+         @keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
         `}
       </style>
       <div
         style={{
-          ...style,
           ...styleSkeleton,
-          animation: animatePulse ? "pulse 2s infinite" : "none",
+          ...style,
+          animation: animatePulse
+            ? "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+            : "none",
         }}
         className={className}
       >
