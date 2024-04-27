@@ -10,7 +10,7 @@ dependencies:
     version: 18.3.1
   yonode:
     specifier: ^1.0.0
-    version: 1.0.0
+    version: 1.1.3
 
 devDependencies:
   '@types/react':
@@ -1545,9 +1545,9 @@ packages:
     hasBin: true
     dev: true
 
-  /yonode@1.0.0:
-    resolution: {integrity: sha512-TvF6rE+IXc4+bGbwG+B+/pHsnhRrGE17pv9VTbnG4rQGu/LctTy6a2L/rcAvFWhiYuF47v+mpmonpjq/3obILA==}
-    engines: {node: '>=0.10.0'}
+  /yonode@1.1.3:
+    resolution: {integrity: sha512-RzorE1ZhpL2d2TzIpryOGvtN1WNYfDEUX9MqVUNenqmbK2ScTAf3zwbCvPfI0qvxefdMIhaRf9ch4iJApz7raw==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
       commander: 12.0.0
